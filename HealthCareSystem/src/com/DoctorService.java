@@ -1,5 +1,4 @@
 package com;
-
 import model.Doctor;
 //For REST Service
 import javax.ws.rs.*;
