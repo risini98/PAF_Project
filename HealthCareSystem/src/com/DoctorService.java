@@ -1,4 +1,5 @@
 package com;
+
 import model.Doctor;
 //For REST Service
 import javax.ws.rs.*;
@@ -64,5 +65,6 @@ public class DoctorService {
 	String output = doctorObj.deleteDoctor(doctorID);
 	return output;
 	}
+
 
 }
