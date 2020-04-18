@@ -41,6 +41,10 @@ public class Appointment {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
+	@Override
+	public String toString() {
+		return "Appointment [id=" + id + ", date=" + date + ", time=" + time + ", description=" + description
+				+ ", status=" + status + "]";
+	}
 	
 }
