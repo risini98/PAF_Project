@@ -73,10 +73,4 @@ HospitalRepository repo = new HospitalRepository();
 		return a;
 	}
 	
-	
-//	@GET
-//    @Produces(MediaType.TEXT_PLAIN)
-//    public String getAlien() {
-//        return "alien!";
-//    }
 }
