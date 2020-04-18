@@ -3,14 +3,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.adithya</groupId>
-    <artifactId>demoServ</artifactId>
+    <groupId>com.telusko</groupId>
+    <artifactId>patient</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demoServ</name>
+    <name>patient</name>
 
     <build>
-        <finalName>demoServ</finalName>
+        <finalName>patient</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -25,6 +25,7 @@
         </plugins>
     </build>
 
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -36,7 +37,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
