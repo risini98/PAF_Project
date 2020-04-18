@@ -128,51 +128,51 @@ public class HospitalRepository
 	}
 	
 	
-//	public void update(Hospital hos) {
-//		String sql = "update hospital set hosname=?,email=?,prov=?,city=?,pc=?,phn=?,er=?,surg=?,xray=?,lab=?,gov=? where id=?;";
-//		try
-//		{
-//		PreparedStatement st = con.prepareStatement(sql);
-//		
-//		st.setString(1,hos.getHospitalName());
-//		st.setString(2,hos.getEmail());
-//		st.setString(3,hos.getProvince());
-//		st.setString(4,hos.getCity());
-//		st.setInt(5,hos.getPostalCode());
-//		st.setInt(6,hos.getPhoneNo());
-//		st.setBoolean(7,hos.isEmergencyRoom());
-//		st.setBoolean(8,hos.isSurgical());
-//		st.setBoolean(9,hos.isXray());
-//		st.setBoolean(10,hos.isLaboratory());
-//		st.setBoolean(11,hos.isGoverment());
-//		st.setInt(12, hos.getId());
-//		st.executeUpdate();
-//		
-//		System.out.println("Updated!");
-//		}
-//		catch(Exception e) {
-//			System.out.println(e);
-//			System.out.println("Not Updated!");
-//		}
-//	}
+	public void update(Hospital hos) {
+		String sql = "update hospital set hosname=?,email=?,prov=?,city=?,pc=?,phn=?,er=?,surg=?,xray=?,lab=?,gov=? where id=?;";
+		try
+		{
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		st.setString(1,hos.getHospitalName());
+		st.setString(2,hos.getEmail());
+		st.setString(3,hos.getProvince());
+		st.setString(4,hos.getCity());
+		st.setInt(5,hos.getPostalCode());
+		st.setInt(6,hos.getPhoneNo());
+		st.setBoolean(7,hos.isEmergencyRoom());
+		st.setBoolean(8,hos.isSurgical());
+		st.setBoolean(9,hos.isXray());
+		st.setBoolean(10,hos.isLaboratory());
+		st.setBoolean(11,hos.isGoverment());
+		st.setInt(12, hos.getId());
+		st.executeUpdate();
+		
+		System.out.println("Updated!");
+		}
+		catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Not Updated!");
+		}
+	}
 
-//	public void delete(int id) {
-//		String sql = "delete from hospital where id=?";
-//		try
-//		{
-//		PreparedStatement st = con.prepareStatement(sql);
-//		
-//		st.setInt(1, id);
-//		st.executeUpdate();
-//		
-//		System.out.println("Deleted!");
-//		
-//		}
-//		catch(Exception e) {
-//			System.out.println(e);
-//			System.out.println("Not Deleted!");
-//		}
-//	}
+	public void delete(int id) {
+		String sql = "delete from hospital where id=?";
+		try
+		{
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		st.setInt(1, id);
+		st.executeUpdate();
+		
+		System.out.println("Deleted!");
+		
+		}
+		catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Not Deleted!");
+		}
+	}
 
 
 }

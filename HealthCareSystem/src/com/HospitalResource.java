@@ -46,33 +46,33 @@ HospitalRepository repo = new HospitalRepository();
 		return hs;
 	}
 	
-//	@PUT
-//	@Path("hospital")
-//	public Hospital updateHospital(Hospital hs)
-//	{
-//		System.out.println(hs);
-//		if(repo.getHospital(hs.getId()).getId()==0)
-//		{
-//			repo.create(hs);
-//		}
-//		else {
-//		repo.update(hs);
-//		}
-//		return hs;
-//	}
+	@PUT
+	@Path("hospital")
+	public Hospital updateHospital(Hospital hs)
+	{
+		System.out.println(hs);
+		if(repo.getHospital(hs.getId()).getId()==0)
+		{
+			repo.create(hs);
+		}
+		else {
+		repo.update(hs);
+		}
+		return hs;
+	}
 	
-//	@DELETE
-//	@Path("hospital/{id}")
-//	public Hospital deleteHospital(@PathParam("id") int id)
-//	{
-//		Hospital a = repo.getHospital(id);
-//		
-//		if(a.getId()!=0) {
-//			repo.delete(id);
-//		}
-//		return a;
-//	}
-//	
+	@DELETE
+	@Path("hospital/{id}")
+	public Hospital deleteHospital(@PathParam("id") int id)
+	{
+		Hospital a = repo.getHospital(id);
+		
+		if(a.getId()!=0) {
+			repo.delete(id);
+		}
+		return a;
+	}
+	
 	
 //	@GET
 //    @Produces(MediaType.TEXT_PLAIN)
