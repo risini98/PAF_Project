@@ -36,15 +36,15 @@ HospitalRepository repo = new HospitalRepository();
 		return repo.getHospital(id);
 	}
 	
-//	@POST
-//	@Path("hospital")
-//	public Hospital createHospital(Hospital hs)
-//	{
-//		System.out.println(hs);
-//		repo.create(hs);
-//		
-//		return hs;
-//	}
+	@POST
+	@Path("hospital")
+	public Hospital createHospital(Hospital hs)
+	{
+		System.out.println(hs);
+		repo.create(hs);
+		
+		return hs;
+	}
 	
 //	@PUT
 //	@Path("hospital")

@@ -96,37 +96,37 @@ public class HospitalRepository
 		return a;
 	}
 
-//	public void create(Hospital hos) {
-//		String sql = "insert into hospital values(?,?,?,?,?,?,?,?,?,?,?,?)";
-//		
-//		try
-//		{
-//		PreparedStatement st = con.prepareStatement(sql);
-//		
-//		st.setInt(1,hos.getId());
-//		st.setString(2,hos.getHospitalName());
-//		st.setString(3,hos.getEmail());
-//		st.setString(4,hos.getProvince());
-//		st.setString(5,hos.getCity());
-//		st.setInt(6,hos.getPostalCode());
-//		st.setInt(7,hos.getPhoneNo());
-//		st.setBoolean(8,hos.isEmergencyRoom());
-//		st.setBoolean(9,hos.isSurgical());
-//		st.setBoolean(10,hos.isXray());
-//		st.setBoolean(11,hos.isLaboratory());
-//		st.setBoolean(12,hos.isGoverment());
-//		
-//		st.executeUpdate();
-//		
-//		System.out.println("Inserted!");
-//		
-//		}
-//		catch(Exception e) {
-//			System.out.println(e);
-//			System.out.println("Not Inserted!");
-//		}
-//	}
-//	
+	public void create(Hospital hos) {
+		String sql = "insert into hospital values(?,?,?,?,?,?,?,?,?,?,?,?)";
+		
+		try
+		{
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		st.setInt(1,hos.getId());
+		st.setString(2,hos.getHospitalName());
+		st.setString(3,hos.getEmail());
+		st.setString(4,hos.getProvince());
+		st.setString(5,hos.getCity());
+		st.setInt(6,hos.getPostalCode());
+		st.setInt(7,hos.getPhoneNo());
+		st.setBoolean(8,hos.isEmergencyRoom());
+		st.setBoolean(9,hos.isSurgical());
+		st.setBoolean(10,hos.isXray());
+		st.setBoolean(11,hos.isLaboratory());
+		st.setBoolean(12,hos.isGoverment());
+		
+		st.executeUpdate();
+		
+		System.out.println("Inserted!");
+		
+		}
+		catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Not Inserted!");
+		}
+	}
+	
 	
 //	public void update(Hospital hos) {
 //		String sql = "update hospital set hosname=?,email=?,prov=?,city=?,pc=?,phn=?,er=?,surg=?,xray=?,lab=?,gov=? where id=?;";
