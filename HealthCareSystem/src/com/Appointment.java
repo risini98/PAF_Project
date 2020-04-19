@@ -11,6 +11,15 @@ public class Appointment {
 	private String time;
 	private String description;
 	private String status;
+	private int hospitalId; 
+	
+	public int getHospitalid() {
+		return hospitalid;
+	}
+	public void setHospitalid(int hospitalid) {
+		this.hospitalid = hospitalid;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -44,7 +53,6 @@ public class Appointment {
 	@Override
 	public String toString() {
 		return "Appointment [id=" + id + ", date=" + date + ", time=" + time + ", description=" + description
-				+ ", status=" + status + "]";
+				+ ", status=" + status + ", hospitalid=" + hospitalid + "]";
 	}
-	
 }

@@ -49,6 +49,7 @@ Connection con = null;
 				a.setTime(rs.getString(3));
 				a.setDescription(rs.getString(4));
 				a.setStatus(rs.getString(5));
+				a.setHospitalid(rs.getInt(6));
 				
 				appointments.add(a);
 				
@@ -75,6 +76,7 @@ Connection con = null;
 				a.setTime(rs.getString(3));
 				a.setDescription(rs.getString(4));
 				a.setStatus(rs.getString(5));
+				a.setHospitalid(rs.getInt(6));
 			}
 		}catch(Exception e)
 		{
@@ -85,7 +87,7 @@ Connection con = null;
 
 	//create
 	public void create(Appointment a1i) {
-		String sql = "insert into appointments(date,time,description,status) values(?,?,?,?);";
+		String sql = "insert into appointments(date,time,description,status,hospitalid) values(?,?,?,?,?);";
 		try
 		{
 			PreparedStatement st = con.prepareStatement(sql);
@@ -94,6 +96,7 @@ Connection con = null;
 			st.setString(2, a1i.getTime());
 			st.setString(3, a1i.getDescription());
 			st.setString(4, a1i.getStatus());
+			st.setInt(5, a1i.getHospitalid());
 			
 			st.executeUpdate();
 			System.out.println("Data inserted!!");
@@ -108,7 +111,7 @@ Connection con = null;
 	
 	//update
 	public void update(Appointment a1i) {
-		String sql = "update appointments set date=? , time=? , description=?, status=? where id=?;";
+		String sql = "update appointments set date=? , time=? , description=?, status=?, hospitalid=? where id=?;";
 		try
 		{
 			PreparedStatement st = con.prepareStatement(sql);
@@ -118,6 +121,7 @@ Connection con = null;
 			st.setString(2, a1i.getTime());
 			st.setString(3, a1i.getDescription());
      		st.setString(4, a1i.getStatus());
+     		st.setInt(5, a1i.getHospitalid());
 			
 			st.executeUpdate();
 			
