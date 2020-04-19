@@ -11,6 +11,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.adithya.demoServ.Appointment;
+
 
 @Path("hospitals")
 public class HospitalResource 
@@ -73,4 +75,11 @@ HospitalRepository repo = new HospitalRepository();
 		return a;
 	}
 	
+	@GET
+	@Path("appoint/{id}")
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Appointment getAppointments(@PathParam("id") int id)
+	{
+		return repo.getAppointments(id);
+	}
 }

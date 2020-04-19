@@ -8,6 +8,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.adithya.demoServ.Appointment;
+import com.adithya.demoServ.Hospital;
+
 public class HospitalRepository
 {
 
@@ -172,6 +175,31 @@ public class HospitalRepository
 			System.out.println(e);
 			System.out.println("Not Deleted!");
 		}
+	}
+	
+	public Appointment getAppointments(int id) {
+		String sql = "select * from appointments where hospitalid=" + id;
+		Hospital a = new Hospital();
+		Appointment ap = new Appointment();
+		try
+		{
+		Statement st = con.createStatement();
+		ResultSet rs =  st.executeQuery(sql);
+		if(rs.next())
+		{
+			ap.setId(rs.getInt(1));
+			ap.setDate(rs.getString(2));
+			ap.setTime(rs.getString(3));
+			ap.setDescription(rs.getString(4));
+			ap.setStatus(rs.getString(5));
+			ap.setHospitalid(rs.getInt(6));
+			
+		}
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		return ap;
 	}
 
 
