@@ -73,4 +73,12 @@ HospitalRepository repo = new HospitalRepository();
 		return a;
 	}
 	
+	@GET
+	@Path("appoint/{id}")
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Appointment getAppointments(@PathParam("id") int id)
+	{
+		return repo.getAppointments(id);
+	}
+	
 }
